@@ -1,0 +1,3 @@
+server:
+  port: 8080 # This could override the default port for the gateway if fetched
+message: "Configuration for API Gateway from Config Server!"
