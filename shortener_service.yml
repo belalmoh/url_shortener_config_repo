@@ -1,0 +1,28 @@
+# In your Git config repo: shortener-service.yml
+server:
+  port: 8082 # Or any port you want shortener-service to run on
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery_server:8761/eureka/ # Points to your Eureka server
+    # Optional: fine-tune registration behavior
+    # instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    # prefer-ip-address: true
+  instance:
+    hostname: shortener_service # Or specify IP if prefer-ip-address is true and needed
+    # lease-renewal-interval-in-seconds: 10 # Example: Heartbeat interval
+    # lease-expiration-duration-in-seconds: 30 # Example: Expiration
+
+# Add any other specific configurations for shortener_service
+# For example, if it uses MongoDB:
+spring:
+  data:
+    mongodb:
+      uri: mongodb://mongo:27017/urlshortenerdb # Assuming 'mongo' is your MongoDB service name in Docker Compose
+      # username: your_mongo_user # if you set up auth for mongo
+      # password: your_mongo_password
+
+# Example custom property
+welcome:
+  message: "Shortener service is up!"
