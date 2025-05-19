@@ -19,7 +19,7 @@ eureka:
 spring:
   data:
     mongodb:
-      uri: mongodb://mongo:27017/urlshortenerdb # Assuming 'mongo' is your MongoDB service name in Docker Compose
+      uri: mongodb://root:rootpw@localhost:5432/urlshortenerdb?authSource=admin # Assuming 'mongo' is your MongoDB service name in Docker Compose
       # username: your_mongo_user # if you set up auth for mongo
       # password: your_mongo_password
 
