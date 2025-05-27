@@ -1,3 +1,25 @@
 server:
-  port: 8080 # This could override the default port for the gateway if fetched
+  port: 9000
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: shortener_service_route
+          uri: lb://shortener_service
+          predicates:
+            - Path=/api/shorten/**
+
+        - id: redirection_service_route
+          uri: lb://redirection_service
+          predicates:
+            - Path=/url/{alias}
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+
 message: "Configuration for API Gateway from Config Server!"
