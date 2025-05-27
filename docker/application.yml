@@ -1,0 +1,9 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health,info,refresh,env"
+
+app:
+  default:
+    message: "Default config are loaded from git repo"
