@@ -23,6 +23,10 @@ spring:
       # username: your_mongo_user # if you set up auth for mongo
       # password: your_mongo_password
 
+api:
+  gateway:
+    public-base-url: http://localhost:9000
+
 # Example custom property
 greeting:
   message: "Shortener service is up!"
