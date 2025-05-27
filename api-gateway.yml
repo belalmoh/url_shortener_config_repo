@@ -8,7 +8,7 @@ spring:
         - id: shortener_service_route
           uri: lb://shortener-service
           predicates:
-            - Path=/api/shorten/**
+            - Path=/api/shorten
 
         - id: redirection_service_route
           uri: lb://redirection-service
