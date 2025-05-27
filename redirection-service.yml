@@ -1,6 +1,6 @@
 # In your Git config repo: shortener-service.yml
 server:
-  port: 8081 # Or any port you want shortener-service to run on
+  port: 8082 # Or any port you want shortener-service to run on
 
 eureka:
   client:
@@ -10,7 +10,7 @@ eureka:
     # instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
     # prefer-ip-address: true
   instance:
-    hostname: shortener_service # Or specify IP if prefer-ip-address is true and needed
+    hostname: redirection-service # Or specify IP if prefer-ip-address is true and needed
     # lease-renewal-interval-in-seconds: 10 # Example: Heartbeat interval
     # lease-expiration-duration-in-seconds: 30 # Example: Expiration
 
@@ -25,4 +25,4 @@ spring:
 
 # Example custom property
 greeting:
-  message: "Shortener service is up!"
+  message: "Redirection service is up!"
