@@ -1,10 +1,6 @@
 server:
   port: 8761 # Default port for Eureka server
 
-spring:
-  application:
-    name: discovery-server # Name of this Eureka server application
-
 eureka:
   client:
     register-with-eureka: false # This server should not register itself with another Eureka server
