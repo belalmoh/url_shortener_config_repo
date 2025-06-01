@@ -7,3 +7,10 @@ management:
 app:
   default:
     message: "Default config are loaded from git repo"
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://discovery-server:8761/eureka/
+  instance:
+    prefer-ip-address: true
